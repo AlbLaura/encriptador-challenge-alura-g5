@@ -27,13 +27,14 @@ section {
     font-size: small;
 }
 article {
-    background-color: #D68E46;
+    background-color: #E0AB76;
     width: 20%;
-    height: 690px;
+    height: 710px;
     float: left;
     display: block;
     border-radius: 5%;
     box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.5);
+    color: #FFF8E7;
 }
 footer {
     text-align: center;
@@ -54,16 +55,18 @@ footer {
     margin-left: 41%;
 }
 /* ARTICLE */
+/*Aviso de no mensaje disponible*/
 .aviso-salida {
     margin-top: 25%;
-    display: block;
-    background-color: #D68E46;
+    display: none; /*cambia a Block cuando no hay texto*/
+    background-color: #E0AB76;
     border-radius: 5%;
     padding: 0px 10px 0 10px;
 }
 #munheco, .aviso-salida h4, .aviso-salida p {
-    background-color: #D68E46;
+    background-color: #E0AB76;
     text-align: center;
+    color: #FFF8E7;
 }
 .aviso-salida h4 {
     font-size: large;
@@ -71,10 +74,21 @@ footer {
 .aviso-salida p {
     font-size:medium;
 }
+/*Mensaje disponible*/
 .text-salida {
-    display: none;
+    background-color: #E0AB76;
+    border-radius: 6%;
+    
+    display: block; /*cambia a None cuando no hay un aviso*/
 }
-/* FOOTER */
+.text-salida textarea {
+    background-color: #E0AB76;
+    color: #FFF8E7;
+    width: 90%;
+    height: 570px;
+    margin: 5%;
+    border: none;
+}
 /* BOTONES */
 button {
     text-align: center;
@@ -94,9 +108,18 @@ button {
     background-color: #FFF8E7;
 }
 .button2:hover {
-    background-color: #F8e2aF;
+    background-color: #E0AB76;
+    color: #FFF8E7;
+}
+.button3 {
+    background-color: #FFF8E7;
+}
+.button3:hover {
+    background-color: #D68E46;
+    color: #FFF8E7;
 }
 #copiar {
-    margin: 8% 0% 0% 13%;
-    display: none;
+    margin-top: 15px;
+    margin-left: 10%;
+    display: block;
 }
