@@ -2,9 +2,9 @@
 * {
     font-family: 'Inter', sans-serif;
     font-size: x-large;
-    background-color: #F5DEB3;
     color: #0A3871;
     box-sizing: border-box;
+    background-color: #F8e2aF;
 }
 body {
     margin-top: 2%;;
@@ -23,10 +23,17 @@ section {
     padding-left: 10%;
     display: block;
 }
+#info em, #info i {
+    font-size: small;
+}
 article {
-    width: 25%;
+    background-color: #D68E46;
+    width: 20%;
+    height: 690px;
     float: left;
     display: block;
+    border-radius: 5%;
+    box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.5);
 }
 footer {
     text-align: center;
@@ -34,8 +41,8 @@ footer {
 }
 /* SECTION */
 #text-ingreso {
-    /*border: none;*/
-    width: 90%;
+    border: none;
+    box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.5);
 }
 .text-ingreso {
     height: 600px;
@@ -47,8 +54,25 @@ footer {
     margin-left: 41%;
 }
 /* ARTICLE */
-#text-salida {
-    /*border: none;*/
+.aviso-salida {
+    margin-top: 25%;
+    display: block;
+    background-color: #D68E46;
+    border-radius: 5%;
+    padding: 0px 10px 0 10px;
+}
+#munheco, .aviso-salida h4, .aviso-salida p {
+    background-color: #D68E46;
+    text-align: center;
+}
+.aviso-salida h4 {
+    font-size: large;
+}
+.aviso-salida p {
+    font-size:medium;
+}
+.text-salida {
+    display: none;
 }
 /* FOOTER */
 /* BOTONES */
@@ -64,15 +88,15 @@ button {
     color: #FFF8E7;
 }
 .button1:hover {
-    background-color: #d68e46;
+    background-color: #D68E46;
 }
 .button2 {
     background-color: #FFF8E7;
 }
 .button2:hover {
-    background-color: #f8e2af;
+    background-color: #F8e2aF;
 }
 #copiar {
     margin: 8% 0% 0% 13%;
+    display: none;
 }
-/**/

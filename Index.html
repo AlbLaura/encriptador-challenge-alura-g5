@@ -21,18 +21,22 @@
         </header>
 
         <section> <!-- Ingresa el texto para encriptar/desencriptar -->
-            <div class="text-ingreso"><textarea rows="20" cols="83" id="text-salida" placeholder="Ingrese un texto"></textarea></div>
+            <div class="text-ingreso"><textarea rows="20" cols="83" id="text-ingreso" placeholder="Ingrese un texto"></textarea></div>
             <span id="info"><i class="fa-solid fa-circle-info"></i> <em>Solo letras minusculas y sin tildes</em></span>
             <button id="encriptar" class="button1">Encriptar</button>
             <button id="desencriptar" class="button2">Desencriptar</button>
         </section>
 
         <article> <!-- Salida del texto encriptado/desencriptado -->
-            <div class="text-salida">
-                <!-- img y texto de aviso -->
-                <div class="text-salida"><textarea rows="20" cols="30" id="text-salida"></textarea></div>
+            <div class="aviso-salida">
+                <img id="munheco" src="munheco.png" alt="ningun mensaje encontrado">
+                <h4>Ningún mensaje fue encontrado</h4>
+                <p>Ingresa en el panel de la izquierda el texto que deseas encriptar/desencriptar</p>
             </div>
-            <button id="copiar" class="button2">Copiar</button>
+            <div class="text-salida">
+                <textarea rows="20" cols="30" id="text-salida"></textarea>
+                <button id="copiar" class="button2">Copiar</button>
+            </div>
         </article>
 
         <footer> <!-- autor -->
