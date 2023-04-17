@@ -1,20 +1,57 @@
+/* GENERAL */
 * {
     font-family: 'Inter', sans-serif;
     font-size: x-large;
     background-color: #F5DEB3;
-    color: black;
+    color: #0A3871;
+    box-sizing: border-box;
 }
-
+body {
+    margin-top: 2%;;
+    margin-left: 2%;
+}
 svg {
     width: 120px;
     height: 48px;
-    margin-top: 1%;
 }
-
+header {
+    margin-bottom: 2%;
+}
 section {
-    margin: 5% 10%;
+    width: 75%;
+    float: left;
+    padding-left: 10%;
+    display: block;
 }
-
+article {
+    width: 25%;
+    float: left;
+    display: block;
+}
+footer {
+    text-align: center;
+    margin-top: 42%;
+}
+/* SECTION */
+#text-ingreso {
+    /*border: none;*/
+    width: 90%;
+}
+.text-ingreso {
+    height: 600px;
+}
+#info {
+    display: block;
+}
+#desencriptar {
+    margin-left: 41%;
+}
+/* ARTICLE */
+#text-salida {
+    /*border: none;*/
+}
+/* FOOTER */
+/* BOTONES */
 button {
     text-align: center;
     width: 300px;
@@ -26,8 +63,16 @@ button {
     background-color: #E0AB76;
     color: #FFF8E7;
 }
-
+.button1:hover {
+    background-color: #d68e46;
+}
 .button2 {
     background-color: #FFF8E7;
-    color: #E0AB76;
 }
+.button2:hover {
+    background-color: #f8e2af;
+}
+#copiar {
+    margin: 8% 0% 0% 13%;
+}
+/**/
