@@ -34,7 +34,7 @@ function copiarTexto() {
     })
 }
 
-function validarTexto(text) {
+function validarTexto(text, encrypt) {
     for (var i = 0; i < text.length; i++) {
         if(letras.indexOf(text.charAt(i), 0) != -1) {
             location.reload(true);
@@ -42,7 +42,7 @@ function validarTexto(text) {
         }
     }
     textSalida.innerHTML = text;
-    return alertaMensaje(text, "Encriptado");
+    return alertaMensaje(text, encrypt);
 }
 
 function displayAviso() {
@@ -64,7 +64,7 @@ function encriptarMensaje() {
     }
 
     displayAviso();
-    validarTexto(textEncript);
+    validarTexto(textEncript, "Encriptado");
 }
 
 function desencriptarMensaje() {
@@ -73,7 +73,7 @@ function desencriptarMensaje() {
     textEncript = textIngreso.replace(/enter/gi, "e").replace(/imes/gi, "i").replace(/ai/gi, "a").replace(/ober/gi, "o").replace(/ufat/gi, "u")
 
     displayAviso();
-    validarTexto(textEncript);
+    validarTexto(textEncript, "Desencriptado");
 }
 
 botonEncriptar.onclick = encriptarMensaje;
