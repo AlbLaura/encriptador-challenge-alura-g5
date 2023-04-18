@@ -2,10 +2,10 @@ var botonEncriptar = document.getElementById("encriptar");
 var botonDesencriptar = document.getElementById("desencriptar");
 var botonCopiar = document.getElementById("copiar");
 var textSalida = document.getElementById("text-salida");
-var cssSalidaText = document.getElementsByClassName("text-salida");
-var cssSalidaImagen = document.getElementsByClassName("aviso-salida");
-var letras="ABCDEFGHIJKLMNÑOPQRSTUVWXYZÀÈÌÒÙÁÉÍÓÚÝÂÊÎÔÛÃÕÄËÏÖÜŸÅÇàèìòùáéíóúýâêîôûãõäëïöüÿåç"; // no se permiten: mayusculas, letras con tilde
+var cssTextoSalida = document.getElementById("aviso-salida-texto");
+var cssImagenSalida = document.getElementById("aviso-salida-imagen");
 var textEncript = "";
+var letras="ABCDEFGHIJKLMNÑOPQRSTUVWXYZÀÈÌÒÙÁÉÍÓÚÝÂÊÎÔÛÃÕÄËÏÖÜŸÅÇàèìòùáéíóúýâêîôûãõäëïöüÿåç"; // no se permiten: mayusculas, letras con tilde
 var vocales = ["e", "i", "a", "o", "u"];
 var vocalesEncriptadas = {
     "e":"enter",
@@ -24,27 +24,31 @@ function alertaMensaje(text, encrypt) {
 }
 
 function copiarTexto() {
-
     navigator.clipboard.writeText(textSalida.value)
     .then(() => {
-    console.log('Texto copiado al portapapeles')
+        alert('Texto copiado al portapapeles');
     })
     .catch(err => {
-        console.error('Error al copiar al portapapeles:', err)
+        console.error(err);
+        alert('Error al copiar al portapapeles');
     })
 }
 
 function validarTexto(text) {
     for (var i = 0; i < text.length; i++) {
         if(letras.indexOf(text.charAt(i), 0) != -1) {
-            console.log("no permitido");
             location.reload(true);
             return alert("Texto con mayusculas o tildes no permitido");
         }
     }
     textSalida.innerHTML = text;
-    console.log("permitido");
     return alertaMensaje(text, "Encriptado");
+}
+
+function displayAviso() {
+    cssImagenSalida.style.display = "none";
+    cssTextoSalida.style.display = "block";
+    botonCopiar.style.display = "block";
 }
 
 function encriptarMensaje() {
@@ -59,6 +63,7 @@ function encriptarMensaje() {
         }
     }
 
+    displayAviso();
     validarTexto(textEncript);
 }
 
@@ -67,6 +72,7 @@ function desencriptarMensaje() {
 
     textEncript = textIngreso.replace(/enter/gi, "e").replace(/imes/gi, "i").replace(/ai/gi, "a").replace(/ober/gi, "o").replace(/ufat/gi, "u")
 
+    displayAviso();
     validarTexto(textEncript);
 }
 

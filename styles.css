@@ -56,32 +56,32 @@ footer {
 }
 /* ARTICLE */
 /*Aviso de no mensaje disponible*/
-.aviso-salida {
+#aviso-salida-imagen {
     margin-top: 25%;
-    display: none; /*cambia a Block cuando no hay texto*/
     background-color: #E0AB76;
     border-radius: 5%;
     padding: 0px 10px 0 10px;
+    display: block; /*cambia a Block cuando no hay texto*/
 }
-#munheco, .aviso-salida h4, .aviso-salida p {
+#munheco, #aviso-salida-imagen h4, #aviso-salida-imagen p {
     background-color: #E0AB76;
     text-align: center;
     color: #FFF8E7;
 }
-.aviso-salida h4 {
+#aviso-salida-imagen h4 {
     font-size: large;
 }
-.aviso-salida p {
+#aviso-salida-imagen p {
     font-size:medium;
 }
 /*Mensaje disponible*/
-.text-salida {
+#aviso-salida-texto {
     background-color: #E0AB76;
     border-radius: 6%;
     
-    display: block; /*cambia a Block cuando no hay un aviso*/
+    display: none; /*cambia a Block cuando no hay un aviso*/
 }
-.text-salida textarea {
+#aviso-salida-texto textarea {
     background-color: #E0AB76;
     color: #FFF8E7;
     width: 90%;
@@ -92,7 +92,8 @@ footer {
 #copiar {
     margin-top: 15px;
     margin-left: 10%;
-    display: block; /*cambia a Block cuando no hay un aviso*/
+
+    display: none; /*cambia a Block cuando no hay un aviso*/
 }
 /* BOTONES */
 button {
