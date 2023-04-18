@@ -79,7 +79,7 @@ footer {
     background-color: #E0AB76;
     border-radius: 6%;
     
-    display: block; /*cambia a None cuando no hay un aviso*/
+    display: block; /*cambia a Block cuando no hay un aviso*/
 }
 .text-salida textarea {
     background-color: #E0AB76;
@@ -88,6 +88,11 @@ footer {
     height: 570px;
     margin: 5%;
     border: none;
+}
+#copiar {
+    margin-top: 15px;
+    margin-left: 10%;
+    display: block; /*cambia a Block cuando no hay un aviso*/
 }
 /* BOTONES */
 button {
@@ -117,9 +122,4 @@ button {
 .button3:hover {
     background-color: #D68E46;
     color: #FFF8E7;
-}
-#copiar {
-    margin-top: 15px;
-    margin-left: 10%;
-    display: block;
 }
