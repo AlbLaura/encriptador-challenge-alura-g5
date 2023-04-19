@@ -131,7 +131,7 @@ button {
     color: #FFF8E7;
 }
 /* RESPONSIVE */
-@media screen and (min-width: 775), (max-width: 1820px) {
+@media screen and (min-width: 775), (max-width: 1440px) {
     section {
         margin-top: 5%;
         width: 100%;
